@@ -125,6 +125,16 @@ class _ProfileState extends State<Profile> {
             ),
             Divider(),
             ListTile(
+              title: Text("My Records",
+                  style: GoogleFonts.openSans(fontSize: 16.0)),
+              subtitle: Text(
+                "2 Official documents submitted",
+                style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              ),
+              trailing: Icon(Icons.chevron_right_rounded),
+            ),
+            Divider(),
+            ListTile(
               title: Text("My Reviews",
                   style: GoogleFonts.openSans(fontSize: 16.0)),
               subtitle: Text(

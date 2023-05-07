@@ -167,12 +167,12 @@ class _MyOrdersState extends State<MyOrders> {
               Container(
                 child: Column(
                   children: [
-                    completedOrders("15605", "A45682WL08", "08-APR-2022", "3",
+                    completedOrders("15605", "A45682WL08", "08-APR-2022",
                         "2650", context),
                     SizedBox(
                       height: countHeight(15, context),
                     ),
-                    completedOrders("15605", "A45682WL08", "08-APR-2022", "3",
+                    completedOrders("15605", "A45682WL08", "08-APR-2022",
                         "2650", context),
                   ],
                 ),
@@ -181,13 +181,11 @@ class _MyOrdersState extends State<MyOrders> {
               Container(
                 child: Column(
                   children: [
-                    processingOrders("15605", "A45682WL08", "08-APR-2022", "",
-                        "3", "2650", context),
+                    processingOrders("15605", "A45682WL08", "08-APR-2022", "", "2650", context),
                     SizedBox(
                       height: countHeight(15, context),
                     ),
-                    processingOrders("15605", "A45682WL08", "08-APR-2022", "",
-                        "3", "2650", context),
+                    processingOrders("15605", "A45682WL08", "08-APR-2022", "", "2650", context),
                   ],
                 ),
               ),
@@ -196,12 +194,12 @@ class _MyOrdersState extends State<MyOrders> {
                 child: Column(
                   children: [
                     cancelledOrders(
-                        "15605", "08-APR-2022", "3", "2650", context),
+                        "15605", "08-APR-2022", "2650", context),
                     SizedBox(
                       height: countHeight(15, context),
                     ),
                     cancelledOrders(
-                        "15605", "08-APR-2022", "3", "2650", context),
+                        "15605", "08-APR-2022", "2650", context),
                   ],
                 ),
               ),

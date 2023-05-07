@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Widget processingOrders(String orderno, String trackingid, String orderdate,
-    String expecteddate, String qty, String amount, context) {
+    String expecteddate, String amount, context) {
   Alignment alignleft = Alignment.topLeft;
   return Container(
     width: double.infinity,
@@ -28,7 +28,7 @@ Widget processingOrders(String orderno, String trackingid, String orderdate,
                 child: Row(
                   children: [
                     Text(
-                      "Order No : $orderno",
+                      "Appointment No : $orderno",
                       style: GoogleFonts.openSans(
                           fontWeight: FontWeight.w600, fontSize: 18.0),
                     ),
@@ -62,27 +62,7 @@ Widget processingOrders(String orderno, String trackingid, String orderdate,
                   ],
                 ),
               )),
-          Align(
-              alignment: alignleft,
-              child: Container(
-                child: Row(
-                  children: [
-                    Text(
-                      "Qty : ",
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 17.0,
-                          color: Colors.grey),
-                    ),
-                    SizedBox(
-                      width: countWidth(10, context),
-                    ),
-                    Text("$qty",
-                        style: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600, fontSize: 18.0)),
-                  ],
-                ),
-              )),
+
           Spacer(),
           Align(
               alignment: alignleft,
@@ -102,7 +82,7 @@ Widget processingOrders(String orderno, String trackingid, String orderdate,
                                   fontSize: 18.0))),
                     ),
                     Spacer(),
-                    Text("PROCESSING",
+                    Text("COMPLETED",
                         style: GoogleFonts.openSans(
                             fontWeight: FontWeight.w600,
                             color: Colors.blue[900],
