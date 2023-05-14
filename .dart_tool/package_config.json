@@ -2,320 +2,428 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "animations",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/animations-2.0.7",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/animations-2.0.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "archive",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.6",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/archive-3.3.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "args",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.4.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/args-2.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "async",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.10.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "carousel_slider",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/carousel_slider-4.2.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/carousel_slider-4.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "characters",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.2.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "clock",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "cloud_firestore",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/cloud_firestore-3.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-5.7.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/cloud_firestore_web-2.8.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "collection",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "convert",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "crypto",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.2",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/crypto-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "expandable_bottom_sheet",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/expandable_bottom_sheet-1.1.1+1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/expandable_bottom_sheet-1.1.1+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "ffi",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.0.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/ffi-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "file",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter",
-      "rootUri": "file:///D:/flutter/flutter/packages/flutter",
+      "name": "firebase_auth",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_auth-3.11.2",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-6.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_auth_web-4.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_core-1.24.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-4.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_core_web-1.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_messaging-11.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging_platform_interface",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_messaging_platform_interface-3.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_messaging_web",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_messaging_web-2.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_storage",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_storage-10.3.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_storage_platform_interface",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_storage_platform_interface-4.1.19",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_storage_web",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/firebase_storage_web-3.3.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "flutter",
+      "rootUri": "file:///home/aftab/snap/flutter/common/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_launcher_icons",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.9.3",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.9.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///D:/flutter/flutter/packages/flutter_test",
+      "rootUri": "file:///home/aftab/snap/flutter/common/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///home/aftab/snap/flutter/common/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/google_fonts-2.2.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/google_fonts-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.5",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/http-0.13.5",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "image",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/image-3.3.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/image-3.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
-      "name": "js",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.5",
+      "name": "intl",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/intl-0.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "like_button",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/like_button-2.0.5",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/like_button-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.13",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/matcher-0.12.15",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.2.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.8.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/meta-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.2",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.0.13",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider-2.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.0.23",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider_android-2.0.23",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.1.2",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider_foundation-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.1.9",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.9",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.1.4",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "petitparser",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-5.1.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/petitparser-5.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "platform",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/platform-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "pointycastle",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.6.2",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/pointycastle-3.6.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "process",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/process-4.2.4",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///D:/flutter/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///home/aftab/snap/flutter/common/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.9.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/source_span-1.9.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/stack_trace-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/stream_channel-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.4.16",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/test_api-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "win32",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/win32-3.1.3",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/win32-3.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "xml",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.1.0",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/xml-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "yaml",
-      "rootUri": "file:///C:/Users/92318/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.1",
+      "rootUri": "file:///home/aftab/.pub-cache/hosted/pub.dev/yaml-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -326,7 +434,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2023-03-05T00:52:01.513502Z",
+  "generated": "2023-05-14T14:46:33.335016Z",
   "generator": "pub",
-  "generatorVersion": "2.19.2"
+  "generatorVersion": "3.0.0"
 }

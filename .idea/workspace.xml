@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65211626-619c-4b1a-a864-b2cb8879e098" name="Changes" comment="frontend full code directory">
+      <change afterPath="$PROJECT_DIR$/lib/Firebase/appointments.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Firebase/records.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Firebase/requests.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Firebase/services.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Flutter Code v1.0.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Flutter Code v1.0.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/c075001b96339384a97db4862b8ab8db.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/c075001b96339384a97db4862b8ab8db.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Widgets/cancelledOrder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Widgets/cancelledOrder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Widgets/comlpetedOrders.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Widgets/comlpetedOrders.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Widgets/processingOrders.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Widgets/processingOrders.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/homepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/myOrderpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/myOrderpage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/intro/introscreenonboarding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/intro/introscreenonboarding.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +59,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MZVgvNNUIQE9De4k0khYcOolST" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
   </component>
@@ -50,24 +69,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230508_0001",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/92318/Downloads/gpp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20230508_0001&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/aftab/Documents/FYP/Flutter/HealthcareFreelancePakistan&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Flutter Code v1.0.0\Images" />
