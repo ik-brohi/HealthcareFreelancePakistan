@@ -3,7 +3,7 @@ import 'package:ecom/Widgets/catagory.dart';
 import 'package:ecom/Widgets/catalogue.dart';
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/cart.dart';
-import 'package:ecom/cattshirt.dart';
+import 'package:ecom/doctorprofile.dart';
 import 'package:ecom/detailpage.dart';
 import 'package:ecom/notifications.dart';
 import 'package:flutter/material.dart';
@@ -112,7 +112,7 @@ class _DashboardState extends State<Dashboard> {
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (builder) => tshirtCata(
-                                      name: "T-shirt",
+                                      name: "Psychologists",
                                     )));
                           }),
                           child: Padding(
@@ -125,7 +125,7 @@ class _DashboardState extends State<Dashboard> {
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (builder) => tshirtCata(
-                                      name: "shirt",
+                                      name: "Neurologists",
                                     )));
                           }),
                           child: Padding(
@@ -138,7 +138,7 @@ class _DashboardState extends State<Dashboard> {
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (builder) => tshirtCata(
-                                      name: "jeans",
+                                      name: "Epidemiologists",
                                     )));
                           }),
                           child: Padding(
@@ -151,7 +151,7 @@ class _DashboardState extends State<Dashboard> {
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (builder) => tshirtCata(
-                                      name: "Sweatshirt",
+                                      name: "Chaplains",
                                     )));
                           }),
                           child: Padding(
@@ -164,7 +164,7 @@ class _DashboardState extends State<Dashboard> {
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (builder) => tshirtCata(
-                                      name: "Jacket",
+                                      name: "Nurses",
                                     )));
                           }),
                           child: Padding(
@@ -391,40 +391,30 @@ class _DashboardState extends State<Dashboard> {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (builder) => Details(
-                                    brand: "higlender",
-                                    price: "1050",
-                                    discprice: "999",
-                                    image: "Images/shirt1.webp",
-                                    title: "blue shirt with white pattern",
+                                    price: "1050 RS",
+                                    image: "Images/doctor1.jpg",
+                                    title: "Doctor Saif",
                                   )));
                         },
                         child: catalogue(
                             "Images/doctor1.jpg",
                             "Doctor Saif",
-                            "Physician",
-                            "",
-                            "2000",
+                            "2000 Rs",
                             context),
                       ),
-                      catalogue("Images/doctor2.png", "Maria Ali",
-                          "Nurse", "", "1000", context),
-                      catalogue("Images/doctor1.jpg", "M Din",
-                          "Dentist", "", "1500", context),
+                      catalogue("Images/doctor2.png", "Maria Ali", "1000 Rs", context),
+                      catalogue("Images/doctor1.jpg", "M Din", "1500 Rs", context),
                       catalogue("Images/doctor1.jpg",
-                          "Abdul Salam", "Nurse", "", "1000", context),
+                          "Abdul Salam", "1000 Rs", context),
                       catalogue(
                           "Images/doctor1.jpg",
                           "Doctor Shamas",
-                          "Neurologist",
-                          "",
-                          "3000",
+                          "3000 Rs",
                           context),
                       catalogue(
                           "Images/doctor1.jpg",
                           "Asad Ali",
-                          "Eye Specialist",
-                          "",
-                          "1000",
+                          "1000 Rs",
                           context),
                     ],
                   ),

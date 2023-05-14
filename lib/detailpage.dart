@@ -6,13 +6,13 @@ import 'package:like_button/like_button.dart';
 
 class Details extends StatefulWidget {
   final String image;
-  final String brand;
+
   final String title;
   final String price;
-  final String discprice;
+
   Details({
-    required this.brand,
-    required this.discprice,
+
+
     required this.image,
     required this.price,
     required this.title,
@@ -103,9 +103,9 @@ class _DetailsState extends State<Details> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            width: countWidth(330, context),
+                            width: countWidth(100, context),
                             child: Text(
-                              "BLUE SHIRT WITH WHITE PATTERN",
+                              "Doctor Saif",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: GoogleFonts.openSans(
@@ -117,7 +117,7 @@ class _DetailsState extends State<Details> {
                           child: Row(
                             children: [
                               Text(
-                                "HIGHLENDER",
+                                "Physiologist",
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.openSans(
@@ -126,28 +126,17 @@ class _DetailsState extends State<Details> {
                                     color: Colors.grey),
                               ),
                               Spacer(),
-                              Text(
-                                "₹1050",
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.openSans(
-                                    decoration: TextDecoration.lineThrough,
-                                    decorationThickness: 2.0,
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 18.0,
-                                    color: Colors.grey[800]),
-                              ),
                               SizedBox(
                                 width: countWidth(10, context),
                               ),
                               Text(
-                                "₹999",
+                                "999 RS",
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.openSans(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18.0,
-                                    color: Colors.red[900]),
+                                    color: Colors.blue[900]),
                               ),
                             ],
                           ),
@@ -156,43 +145,9 @@ class _DetailsState extends State<Details> {
                             child: Column(children: [
                           Align(
                             alignment: Alignment.topLeft,
-                            child: Container(
-                              child: Text(
-                                "Choose Size",
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.openSans(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 18.0,
-                                    color: Colors.grey[600]),
-                              ),
-                            ),
                           ),
                           SizedBox(
                             height: countWidth(10, context),
-                          ),
-                          Container(
-                            child: Row(
-                              children: [
-                                sizeChart(
-                                    "S", Colors.black, Colors.white, context),
-                                SizedBox(
-                                  width: countWidth(10, context),
-                                ),
-                                sizeChart(
-                                    "m", Colors.white, Colors.black, context),
-                                SizedBox(
-                                  width: countWidth(10, context),
-                                ),
-                                sizeChart(
-                                    "l", Colors.white, Colors.black, context),
-                                SizedBox(
-                                  width: countWidth(10, context),
-                                ),
-                                sizeChart(
-                                    "xl", Colors.white, Colors.black, context),
-                              ],
-                            ),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -293,7 +248,7 @@ class _DetailsState extends State<Details> {
                             ),
                           ),
                           subtitle: Text(
-                            "Best fit and super comfortable.Must buy.",
+                            "Very good health care service provider.",
                             style: GoogleFonts.openSans(
                               fontWeight: FontWeight.normal,
                               color: Colors.grey[700],
@@ -326,7 +281,7 @@ class _DetailsState extends State<Details> {
                             ),
                           ),
                           subtitle: Text(
-                            "Best fit and super comfortable.Must buy.",
+                            "Thanks for giving me relief from pain",
                             style: GoogleFonts.openSans(
                               fontWeight: FontWeight.normal,
                               color: Colors.grey[700],
@@ -361,7 +316,7 @@ class _DetailsState extends State<Details> {
                             ),
                           ),
                           subtitle: Text(
-                            "Best fit and super comfortable.Must buy.",
+                            "Great experience with the doctor nice personality",
                             style: GoogleFonts.openSans(
                               fontWeight: FontWeight.normal,
                               color: Colors.grey[700],
@@ -389,7 +344,7 @@ class _DetailsState extends State<Details> {
               ),
               child: Center(
                   child: Text(
-                "Add to Cart",
+                "Hire Now",
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

@@ -2,8 +2,8 @@ import 'package:ecom/Widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget catalogue(String image, String title, String comp, String orgprice,
-    String disprice, context) {
+Widget catalogue(String image, String title, String orgprice,
+     context) {
   return Container(
     decoration: BoxDecoration(),
     height: 125.0,
@@ -42,19 +42,6 @@ Widget catalogue(String image, String title, String comp, String orgprice,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 0.0),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    comp.toUpperCase(),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.openSans(
-                        color: Colors.grey, fontWeight: FontWeight.normal),
-                  ),
-                ),
-              ),
-              Padding(
                 padding: const EdgeInsets.only(left: 8.0, top: 5.0),
                 child: Align(
                   alignment: Alignment.topLeft,
@@ -62,25 +49,11 @@ Widget catalogue(String image, String title, String comp, String orgprice,
                     children: [
                       Text(
                         "$orgprice".toUpperCase(),
+
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.openSans(
-                            color: Colors.red[900],
-                            decoration: TextDecoration.lineThrough,
-                            decorationColor: Colors.black,
-                            decorationThickness: 2.0,
-                            decorationStyle: TextDecorationStyle.solid,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Text(
-                        "$disprice RS.".toUpperCase(),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.openSans(
-                            color: Colors.blue,
+                            color: Colors.blue[900],
                             fontWeight: FontWeight.bold),
                       ),
                     ],
