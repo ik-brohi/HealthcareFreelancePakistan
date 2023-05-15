@@ -1,7 +1,11 @@
 import 'dart:typed_data';
 import 'dart:html';
 
+import 'package:ecom/AddressPage.dart';
+import 'package:ecom/PrivacySecurityPage.dart';
+import 'package:ecom/ReviewsPage.dart';
 import 'package:ecom/Widgets/responsive.dart';
+import 'package:ecom/medicalRecordPage.dart';
 import 'package:ecom/myOrderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -124,65 +128,82 @@ class _ProfileState extends State<Profile> {
                   ),
                 ),
               ),
-GestureDetector(
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (builder) => MyOrders()));
-              },
-              child: ListTile(
-                title: Text("My Appointments",
-                    style: GoogleFonts.openSans(fontSize: 16.0)),
-                subtitle: Text(
-                  "2 Appointments",
-                  style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrders()));
+                },
+                child: ListTile(
+                  title: Text("My Appointments", style: GoogleFonts.openSans(fontSize: 16.0)),
+                  subtitle: Text(
+                    "2 Appointments",
+                    style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+                  ),
+                  trailing: Icon(Icons.chevron_right_rounded),
                 ),
-                trailing: Icon(Icons.chevron_right_rounded),
               ),
-            ),
-            Divider(),
-            ListTile(
-              title: Text("Addresses",
-                  style: GoogleFonts.openSans(fontSize: 16.0)),
-              subtitle: Text(
-                "2 Addresses",
-                style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddressPage()));
+                },
+                child: ListTile(
+                  title: Text("Addresses", style: GoogleFonts.openSans(fontSize: 16.0)),
+                  subtitle: Text(
+                    "2 Addresses",
+                    style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+                  ),
+                  trailing: Icon(Icons.chevron_right_rounded),
+                ),
               ),
-              trailing: Icon(Icons.chevron_right_rounded),
-            ),
-            Divider(),
-            ListTile(
-              title: Text("My Records",
-                  style: GoogleFonts.openSans(fontSize: 16.0)),
-              subtitle: Text(
-                "2 Official documents submitted",
-                style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MedicalRecordPage()));
+                },
+                child: ListTile(
+                  title: Text("My Records", style: GoogleFonts.openSans(fontSize: 16.0)),
+                  subtitle: Text(
+                    "2 Official documents submitted",
+                    style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+                  ),
+                  trailing: Icon(Icons.chevron_right_rounded),
+                ),
               ),
-              trailing: Icon(Icons.chevron_right_rounded),
-            ),
-            Divider(),
-            ListTile(
-              title: Text("My Reviews",
-                  style: GoogleFonts.openSans(fontSize: 16.0)),
-              subtitle: Text(
-                "01 Reviews",
-                style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ReviewsPage()));
+                },
+                child: ListTile(
+                  title: Text("My Reviews", style: GoogleFonts.openSans(fontSize: 16.0)),
+                  subtitle: Text(
+                    "01 Reviews",
+                    style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+                  ),
+                  trailing: Icon(Icons.chevron_right_rounded),
+                ),
               ),
-              trailing: Icon(Icons.chevron_right_rounded),
-            ),
-            Divider(),
-            ListTile(
-              title:
-                  Text("Account Settings", style: GoogleFonts.openSans(fontSize: 16.0)),
-              subtitle: Text(
-                "Notification-Security",
-                style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+              Divider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => PrivacySecurityPage()));
+                },
+                child: ListTile(
+                  title: Text("Account Settings", style: GoogleFonts.openSans(fontSize: 16.0)),
+                  subtitle: Text(
+                    "Privacy and Security",
+                    style: GoogleFonts.openSans(fontWeight: FontWeight.normal),
+                  ),
+                  trailing: Icon(Icons.chevron_right_rounded),
+                ),
               ),
-              trailing: Icon(Icons.chevron_right_rounded),
-            ),
-            Divider(),
-          ],
-        )),
-      ),
-    );
-  }
+              Divider(),
+             // Closing brace for the ListView widget
+        ], // Closing brace for the Column widget
+      ), // Closing brace for the Container widget
+    ), // Closing brace for the Padding widget
+    ), // Closing brace for the Scaffold widget
+    ); // Closing brace for the build method
+  } // Closing brace for the _ProfileState class
 }
+

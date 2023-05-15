@@ -6,16 +6,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'Widgets/catalogue.dart';
 
-class tshirtCata extends StatefulWidget {
+class DoctorCat extends StatefulWidget {
   final String name;
-  tshirtCata({
+  DoctorCat({
      required this.name,
   });
   @override
-  State<tshirtCata> createState() => _doctorCataState();
+  State<DoctorCat> createState() => _DoctorCatState();
 }
 
-class _doctorCataState extends State<tshirtCata> {
+class _DoctorCatState extends State<DoctorCat> {
   List brands = [
     Image.asset("Images/2.png"),
     Image.asset("Images/1.png"),

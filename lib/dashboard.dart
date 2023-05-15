@@ -1,9 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecom/HealthcareTipsPage.dart';
 import 'package:ecom/Widgets/catagory.dart';
 import 'package:ecom/Widgets/catalogue.dart';
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/cart.dart';
-import 'package:ecom/doctorprofile.dart';
+import 'package:ecom/DoctorCat.dart';
 import 'package:ecom/detailpage.dart';
 import 'package:ecom/notifications.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,7 @@ class _DashboardState extends State<Dashboard> {
                         GestureDetector(
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (builder) => tshirtCata(
+                                builder: (builder) => DoctorCat(
                                       name: "Psychologists",
                                     )));
                           }),
@@ -124,7 +125,7 @@ class _DashboardState extends State<Dashboard> {
                         GestureDetector(
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (builder) => tshirtCata(
+                                builder: (builder) => DoctorCat(
                                       name: "Neurologists",
                                     )));
                           }),
@@ -137,7 +138,7 @@ class _DashboardState extends State<Dashboard> {
                         GestureDetector(
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (builder) => tshirtCata(
+                                builder: (builder) => DoctorCat(
                                       name: "Epidemiologists",
                                     )));
                           }),
@@ -150,7 +151,7 @@ class _DashboardState extends State<Dashboard> {
                         GestureDetector(
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (builder) => tshirtCata(
+                                builder: (builder) => DoctorCat(
                                       name: "Chaplains",
                                     )));
                           }),
@@ -163,7 +164,7 @@ class _DashboardState extends State<Dashboard> {
                         GestureDetector(
                           onTap: (() {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (builder) => tshirtCata(
+                                builder: (builder) => DoctorCat(
                                       name: "Nurses",
                                     )));
                           }),
@@ -183,7 +184,7 @@ class _DashboardState extends State<Dashboard> {
                 GestureDetector(
                   onTap: (() {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => tshirtCata(name: "summer SAle")));
+                        builder: (builder) => DoctorCat(name: "summer SAle")));
                   }),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -220,7 +221,7 @@ class _DashboardState extends State<Dashboard> {
                             onTap: (() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (builder) =>
-                                      tshirtCata(name: "HRX")));
+                                      DoctorCat(name: "HRX")));
                             }),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -238,7 +239,7 @@ class _DashboardState extends State<Dashboard> {
                             onTap: (() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (builder) =>
-                                      tshirtCata(name: "wrong")));
+                                      DoctorCat(name: "wrong")));
                             }),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -259,7 +260,7 @@ class _DashboardState extends State<Dashboard> {
                   onTap: (() {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (builder) =>
-                            tshirtCata(name: "featured brands")));
+                            DoctorCat(name: "featured brands")));
                   }),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -282,7 +283,7 @@ class _DashboardState extends State<Dashboard> {
                 GestureDetector(
                   onTap: (() {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => tshirtCata(name: "LEVIS")));
+                        builder: (builder) => HealthcareTipsPage()));
                   }),
                   child: Padding(
                     padding: const EdgeInsets.all(1.0),
@@ -356,7 +357,7 @@ class _DashboardState extends State<Dashboard> {
                 GestureDetector(
                   onTap: (() {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => tshirtCata(name: "trending")));
+                        builder: (builder) => DoctorCat(name: "trending")));
                   }),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
