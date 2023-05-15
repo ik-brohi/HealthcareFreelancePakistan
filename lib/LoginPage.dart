@@ -1,3 +1,4 @@
+import 'package:ecom/SignUpPage.dart';
 import 'package:ecom/onboardingScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -40,13 +41,14 @@ class _LoginPageState extends State<LoginPage> {
     // You can check the role of the user and navigate accordingly
     if (email.isNotEmpty && password.isNotEmpty && selectedCategory != null) {
       // Example login logic for demonstration
-      if (selectedCategory == 'Healthcare Professional' && email == 'doctor@example.com') {
+      if (selectedCategory == 'HEALTHCARE PROFESSIONAL' &&
+          email == 'doctor@example.com') {
         // Navigate to doctor's home page
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => onBoardingScreen()),
         );
-      } else if (selectedCategory == 'Patient') {
+      } else if (selectedCategory == 'PATIENT') {
         // Navigate to patient's home page
         Navigator.pushReplacement(
           context,
@@ -63,93 +65,103 @@ class _LoginPageState extends State<LoginPage> {
         title: Text('Login'),
       ),
       body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
             CircleAvatar(
-            radius: 50,
-            backgroundColor: Colors.blue,
-            child: Icon(
-              Icons.person,
-              size: 50,
-              color: Colors.white,
-            ),
-          ),
-          SizedBox(height: 16.0),
-          DropdownButtonFormField<String>(
-            value: selectedCategory,
-            onChanged: (String? newValue) {
-              setState(() {
-                selectedCategory = newValue;
-              });
-            },
-            decoration: InputDecoration(
-              labelText: 'Category',
-            ),
-            items: <String>[
-              'Healthcare Professional',
-              'Patient',
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-          SizedBox(height: 8.0),
-          TextField(
-            controller: emailController,
-            decoration: InputDecoration(
-              labelText: 'Email',
-            ),
-          ),
-          SizedBox(height: 8.0),
-          TextField(
-            controller: passwordController,
-            decoration: InputDecoration(
-              labelText: 'Password',
-            ),
-            obscureText: true,
-          ),
-          Row(
-            children: [
-              Checkbox(
-                value: rememberPassword,
-                onChanged: (bool? value) {
-                  setState(() {
-                    rememberPassword = value ?? false;
-                  });
-                },
+              radius: 50,
+              backgroundColor: Colors.blue,
+              child: Icon(
+                Icons.person,
+                size: 50,
+                color: Colors.white,
               ),
-              Text('Remember password'),
-            ],
-          ),
-          SizedBox(height: 16.0),
-          ElevatedButton(
-            onPressed: login,
-            child: Text('Login'),
-          ),
-          SizedBox(height: 8.0),
-          GestureDetector(
-          onTap: () {
-      // Navigate to signup page
-      Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => onBoardingScreen()),
-    );
-  },
-    child: Text(
-    'Don\'t have an account? Sign up here.',
-    style: TextStyle(
-      decoration: TextDecoration.underline,
-      color: Colors.blue,
-    ),
-          ),
+            ),
+            SizedBox(height: 16.0),
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            SizedBox(height: 8.0),
+            TextField(
+              controller: passwordController,
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
+            SizedBox(height: 16.0),
+            DropdownButtonFormField<String>(
+              value: selectedCategory,
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedCategory = newValue;
+                });
+              },
+              decoration: InputDecoration(
+                labelText: 'Choose Role',
+              ),
+              items: <String>[
+                'HEALTHCARE PROFESSIONAL',
+                'PATIENT',
+              ].map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            SizedBox(height: 8.0),
+            Row(
+              children: [
+                Checkbox(
+                  value: rememberPassword,
+                  onChanged: (bool? value) {
+                    setState(() {
+                      rememberPassword = value ?? false;
+                    });
+                  },
+                ),
+                Text('Remember password'),
+              ],
+            ),
+            SizedBox(height: 16.0),
+            ElevatedButton(
+              onPressed: login,
+              child: Text('Login'),
+            ),
+            SizedBox(height: 8.0),
+            GestureDetector(
+              onTap: () {
+                // Navigate to signup page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpApp()),
+                );
+              },
+              child: Container(
+                child: Row(
+                  children: [
+                    Text(
+                      'Don\'t have an account?',
+                    ),
+                    SizedBox(height: 8.0),
+                    Text(
+                      ' Sign Up here.',
+                      style: TextStyle(
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
-      ],
-    ),
-    ),
     );
   }
 }

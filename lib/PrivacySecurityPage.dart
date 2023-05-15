@@ -1,3 +1,4 @@
+import 'package:ecom/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class PrivacySecurityPage extends StatelessWidget {
@@ -68,8 +69,11 @@ class PrivacySecurityPage extends StatelessWidget {
               leading: Icon(Icons.logout),
               title: Text('Logout'),
               onTap: () {
-                // Implement the logout logic
-                // For example, you can navigate to the login page and clear the user session
+                // Navigate to signup page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginApp()),
+                );
               },
             ),
           ],
