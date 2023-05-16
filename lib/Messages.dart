@@ -6,14 +6,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'Widgets/conversationList.dart';
 import 'models/chatUserModel.dart';
 
-class Cart extends StatefulWidget {
+class Messages extends StatefulWidget {
   final bool showbtn;
-  Cart({required this.showbtn});
+  Messages({required this.showbtn});
   @override
-  State<Cart> createState() => _CartState();
+  State<Messages> createState() => _MessagesState();
 }
 
-class _CartState extends State<Cart> {
+class _MessagesState extends State<Messages> {
   List<ChatUsers> chatUsers = [
     ChatUsers(name: "Jane Russel", messageText: "Awesome Setup", imageURL: "images/Doctor11.jpg", time: "Now"),
     ChatUsers(name: "Glady's Murphy", messageText: "That's Great", imageURL: "images/Doctor11.jpg", time: "Yesterday"),

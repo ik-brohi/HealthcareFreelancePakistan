@@ -1,4 +1,4 @@
-import 'package:ecom/cart.dart';
+import 'package:ecom/Messages.dart';
 import 'package:ecom/dashboard.dart';
 import 'package:ecom/favourite.dart';
 import 'package:ecom/myOrderpage.dart';
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
   List pages = [
     Dashboard(),
-    Cart(showbtn: false),
+    Messages(showbtn: false),
     MyOrders(),
     Profile(),
   ];

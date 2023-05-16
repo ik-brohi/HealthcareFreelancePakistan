@@ -4,7 +4,7 @@ import 'package:ecom/HealthcareTipsPage.dart';
 import 'package:ecom/Widgets/catagory.dart';
 import 'package:ecom/Widgets/catalogue.dart';
 import 'package:ecom/Widgets/responsive.dart';
-import 'package:ecom/cart.dart';
+import 'package:ecom/Messages.dart';
 import 'package:ecom/DoctorCat.dart';
 import 'package:ecom/detailpage.dart';
 import 'package:ecom/notifications.dart';
