@@ -10,13 +10,18 @@ import 'package:ecom/myOrderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Profile extends StatefulWidget {
+
   @override
   State<Profile> createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
+  String? role;
+  String? email;
+  String? name;
   Uint8List? _imageData;
   Alignment alignleft = Alignment.topLeft;
   Alignment alignright = Alignment.topRight;
@@ -32,7 +37,22 @@ class _ProfileState extends State<Profile> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
+    _getRoleFromSharedPreferences();
+  }
+
+  Future<void> _getRoleFromSharedPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      role = prefs.getString('role') ?? '';
+      email = prefs.getString('email') ?? '';
+      name = prefs.getString('name') ?? '';
+    });
+  }
+
+  @override
+  Scaffold build(BuildContext context)  {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -102,7 +122,7 @@ class _ProfileState extends State<Profile> {
                                 Align(
                                   alignment: alignleft,
                                   child: Text(
-                                    "Imran Khan",
+                                    name.toString(),
                                     style: GoogleFonts.openSans(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 18.0),
@@ -111,7 +131,7 @@ class _ProfileState extends State<Profile> {
                                 Align(
                                   alignment: alignleft,
                                   child: Text(
-                                    "Ik02161@gmail.com",
+                                    email.toString(),
                                     style: GoogleFonts.openSans(
                                       fontWeight: FontWeight.normal,
                                       fontSize: 15.0,

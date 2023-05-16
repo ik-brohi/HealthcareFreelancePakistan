@@ -22,6 +22,7 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController fullNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool rememberPassword = false;
   String? selectedCategory;
@@ -36,6 +37,7 @@ class _SignUpPageState extends State<SignUpPage> {
   void signup() {
     String email = emailController.text;
     String password = passwordController.text;
+    String fullName = fullNameController.text;
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => LoginApp()),
@@ -63,6 +65,13 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             SizedBox(height: 16.0),
+            TextField(
+              controller: fullNameController,
+              decoration: InputDecoration(
+                labelText: 'Full Name',
+              ),
+            ),
+            SizedBox(height: 8.0),
             TextField(
               controller: emailController,
               decoration: InputDecoration(

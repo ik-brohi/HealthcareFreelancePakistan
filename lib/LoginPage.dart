@@ -1,6 +1,7 @@
 import 'package:ecom/SignUpPage.dart';
 import 'package:ecom/onboardingScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginApp extends StatelessWidget {
   @override
@@ -33,23 +34,27 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  void login() {
+  void  login() async{
     String email = emailController.text;
     String password = passwordController.text;
-
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     // Perform login logic here based on the entered email and password
     // You can check the role of the user and navigate accordingly
-    if (email.isNotEmpty && password.isNotEmpty && selectedCategory != null) {
+    if (email.isNotEmpty && password.isNotEmpty) {
       // Example login logic for demonstration
-      if (selectedCategory == 'HEALTHCARE PROFESSIONAL' &&
-          email == 'doctor@example.com') {
-        // Navigate to doctor's home page
+      if(email == 'doctor@example.com') {
+        await prefs.setString("name", "Imran Khan");
+        await prefs.setString("email", "doctor@example.com"); // Navigate to doctor's home page
+        await prefs.setString("role", "HEALTHCARE PROFESSIONAL"); // Navigate to doctor's home page
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => onBoardingScreen()),
         );
-      } else if (selectedCategory == 'PATIENT') {
+      } else {
         // Navigate to patient's home page
+        await prefs.setString("name", "Patient Test");
+        await prefs.setString("email", email);
+        await prefs.setString("role", "PATIENT");
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => onBoardingScreen()),
@@ -92,27 +97,6 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: 'Password',
               ),
               obscureText: true,
-            ),
-            SizedBox(height: 16.0),
-            DropdownButtonFormField<String>(
-              value: selectedCategory,
-              onChanged: (String? newValue) {
-                setState(() {
-                  selectedCategory = newValue;
-                });
-              },
-              decoration: InputDecoration(
-                labelText: 'Choose Role',
-              ),
-              items: <String>[
-                'HEALTHCARE PROFESSIONAL',
-                'PATIENT',
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
             ),
             SizedBox(height: 8.0),
             Row(

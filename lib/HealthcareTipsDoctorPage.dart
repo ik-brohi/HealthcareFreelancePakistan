@@ -39,6 +39,7 @@ class _HealthcareTipsDoctorPageState extends State<HealthcareTipsDoctorPage> {
                 ),
                 SizedBox(height: 8.0),
                 TextField(
+                  maxLines: 10,
                   controller: descriptionController,
                   decoration: InputDecoration(
                     labelText: 'Description',

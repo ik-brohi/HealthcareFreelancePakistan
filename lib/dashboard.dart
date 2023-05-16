@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecom/HealthcareTipsDoctorPage.dart';
 import 'package:ecom/HealthcareTipsPage.dart';
 import 'package:ecom/Widgets/catagory.dart';
 import 'package:ecom/Widgets/catalogue.dart';
@@ -9,6 +10,7 @@ import 'package:ecom/detailpage.dart';
 import 'package:ecom/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -16,6 +18,7 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  String? role;
   @override
   Widget build(BuildContext context) {
     List brands = [
@@ -281,9 +284,14 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: (() {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (builder) => HealthcareTipsPage()));
+                  onTap: (() async {
+                    SharedPreferences prefs = await SharedPreferences.getInstance();
+                    setState(() {
+                      role = prefs.getString('role');
+                    });
+                    role=="HEALTHCARE PROFESSIONAL"? Navigator.of(context).push(MaterialPageRoute(
+                        builder: (builder) => HealthcareTipsDoctorPage())) : Navigator.of(context).push(MaterialPageRoute(
+                    builder: (builder) => HealthcareTipsPage()));
                   }),
                   child: Padding(
                     padding: const EdgeInsets.all(1.0),
