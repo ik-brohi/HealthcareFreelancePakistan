@@ -3,7 +3,9 @@ import 'package:ecom/dashboard.dart';
 import 'package:ecom/favourite.dart';
 import 'package:ecom/myOrderpage.dart';
 import 'package:ecom/profile.dart';
+import 'package:ecom/profileDoctor.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,17 +13,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String? role;
+  @override
+  void initState() {
+    super.initState();
+    _getRoleFromSharedPreferences();
+  }
+
+  Future<void> _getRoleFromSharedPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      role = prefs.getString('role') ?? '';
+    });
+  }
+
   int index = 0;
   List pages = [
     Dashboard(),
     Messages(showbtn: false),
     MyOrders(),
     Profile(),
+    ProfileDoctor(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, body: pages[index],
+      backgroundColor: Colors.white, body: index==3 ? (role=='HEALTHCARE PROFESSIONAL' ? pages[4]: pages[3]): pages[index],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
           onTap: (value) {
