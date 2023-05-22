@@ -1,4 +1,6 @@
 # This is a generated file; do not edit or check into version control.
+cloud_firestore=/home/aftab/.pub-cache/hosted/pub.dev/cloud_firestore-4.7.1/
+cloud_firestore_web=/home/aftab/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.5.1/
 file_picker=/home/aftab/.pub-cache/hosted/pub.dev/file_picker-5.3.0/
 firebase_auth=/home/aftab/.pub-cache/hosted/pub.dev/firebase_auth-4.6.1/
 firebase_auth_web=/home/aftab/.pub-cache/hosted/pub.dev/firebase_auth_web-5.5.1/

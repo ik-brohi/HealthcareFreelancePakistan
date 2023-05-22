@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "4717444796",
+    "firebase_url": "https://healthcare-freelance-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "healthcare-freelance",
+    "storage_bucket": "healthcare-freelance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4717444796:android:34b5fd0551f0b9e4c75ab9",
+        "android_client_info": {
+          "package_name": "com.example.ecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4717444796-uvrd03rgqrjoqi1d7ej6490hms9nij6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWJsQryRVZ-wXQ9K-Mnbh-kTQ4fmuSWG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4717444796-plvgblr7h741nkroufngjmdan4qgr4nq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
