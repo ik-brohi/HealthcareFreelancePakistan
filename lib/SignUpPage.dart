@@ -24,6 +24,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController fullNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   bool rememberPassword = false;
   String? selectedCategory;
 
@@ -36,6 +37,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void signup() {
     String email = emailController.text;
+    String phoneNum = phoneController.text;
     String password = passwordController.text;
     String fullName = fullNameController.text;
     Navigator.pushReplacement(
@@ -76,6 +78,13 @@ class _SignUpPageState extends State<SignUpPage> {
               controller: emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
+              ),
+            ),
+            SizedBox(height: 8.0),
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(
+                labelText: 'Phone Number',
               ),
             ),
             SizedBox(height: 8.0),
@@ -128,7 +137,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       'Already have an account? ',
                     ),
                     SizedBox(height: 8.0),
-
                     Text(
                       ' Login Here.',
                       style: TextStyle(
