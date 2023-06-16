@@ -34,7 +34,6 @@ class _SignUpPageState extends State<SignUpPage> {
     passwordController.dispose();
     super.dispose();
   }
-
   void signup() {
     String email = emailController.text;
     String phoneNum = phoneController.text;
@@ -45,7 +44,6 @@ class _SignUpPageState extends State<SignUpPage> {
       MaterialPageRoute(builder: (context) => LoginApp()),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

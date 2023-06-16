@@ -1,5 +1,31 @@
-class User{
-  final String uid;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-  User({required this.uid});
+class User {
+  late String id;
+  late final String name;
+  late final String role;
+  late final int age;
+
+  User({
+    this.id = '',
+    required this.name,
+    required this.age,
+    required this.role,
+  });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'age': age,
+      'role': role,
+    };
+  }
+
+  static User fromJson(Map<String, dynamic> json) => User(
+      id: json['id'],
+      name: json['name'],
+      age: json['age'],
+      role: json['role'],
+  );
 }
