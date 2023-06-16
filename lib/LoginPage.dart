@@ -42,16 +42,19 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
+  void  login() async{
+    String email = emailController.text;
+    String password = passwordController.text;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
 
-/*
-void _login() async {
+    //Sign in logic
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
 
       try {
         UserCredential userCredential = await _auth.signInWithEmailAndPassword(
-          email: _email,
-          password: _password,
+          email: email,
+          password: password,
         );
         User? user = userCredential.user;
         if(user!.emailVerified){
@@ -65,19 +68,15 @@ void _login() async {
         // Handle authentication errors.
       }
     }
-  }
-*/
 
-  void  login() async{
-    String email = emailController.text;
-    String password = passwordController.text;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    //Sign in logic
+
+
+
     // Perform login logic here based on the entered email and password
     // You can check the role of the user and navigate accordingly
 
 
-    if (email=='doctor@example.com' && password =='123@') {
+    /*if (email=='doctor@example.com' && password =='123@') {
       // Example login logic for demonstration
       if(email == 'doctor@example.com') {
         await prefs.setString("name", "Imran Khan");
@@ -97,7 +96,7 @@ void _login() async {
           MaterialPageRoute(builder: (context) => onBoardingScreen()),
         );
       }
-    }
+    }*/
   }
 
   @override

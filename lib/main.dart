@@ -6,8 +6,8 @@ import 'LoginPage.dart';
 import 'onboardingScreen.dart';
 
 void main() async {
-  /*WidgetsFlutterBinding.ensureInitialized();*/
-  Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignUpPage()
+      home: LoginPage()
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:ecom/screens/home/home.dart';
+import 'home/home.dart';
 import 'package:flutter/material.dart';
 
 class Wrapper extends StatelessWidget {

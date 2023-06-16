@@ -4,28 +4,40 @@ class User {
   late String id;
   late final String name;
   late final String role;
-  late final int age;
+  late final String gender;
+  late final int phone;
+  late final String username;
+  late final Timestamp dob;
+
 
   User({
     this.id = '',
     required this.name,
-    required this.age,
     required this.role,
+    required this.phone,
+    required this.gender,
+    required this.username,
+    required this.dob,
   });
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'name': name,
-      'age': age,
+      'dob': dob,
       'role': role,
+      'phone': phone,
+      'gender': gender,
+      'username': username,
     };
   }
 
   static User fromJson(Map<String, dynamic> json) => User(
       id: json['id'],
       name: json['name'],
-      age: json['age'],
-      role: json['role'],
+      dob: json['dob'],
+      username: json['username'],
+      gender: json['gender'],
+      role: json['role'], phone: json['phone'],
   );
 }

@@ -1,6 +1,8 @@
 import 'package:ecom/LoginPage.dart';
 import 'package:ecom/onboardingScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class SignUpApp extends StatelessWidget {
   @override
@@ -21,10 +23,12 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController fullNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
+  //final TextEditingController fullNameController = TextEditingController();
+  //final TextEditingController phoneController = TextEditingController();
+
   bool rememberPassword = false;
   String? selectedCategory;
 
@@ -34,11 +38,31 @@ class _SignUpPageState extends State<SignUpPage> {
     passwordController.dispose();
     super.dispose();
   }
-  void signup() {
+  Future signup() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
     String email = emailController.text;
-    String phoneNum = phoneController.text;
     String password = passwordController.text;
-    String fullName = fullNameController.text;
+    //String fullName = fullNameController.text;
+    //String phoneNum = phoneController.text;
+
+
+    try {
+      final credential = await auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      User? user = credential.user;
+      print(user?.uid);
+      await user?.sendEmailVerification();
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        print('The password provided is too weak.');
+      } else if (e.code == 'email-already-in-use') {
+        print('The account already exists for that email.');
+      }
+    } catch (e) {
+      print(e);
+    }
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => LoginApp()),
@@ -65,12 +89,13 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             SizedBox(height: 16.0),
-            TextField(
+            //Full Name Text Field
+            /*TextField(
               controller: fullNameController,
               decoration: InputDecoration(
                 labelText: 'Full Name',
               ),
-            ),
+            ),*/
             SizedBox(height: 8.0),
             TextField(
               controller: emailController,
@@ -79,12 +104,13 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             SizedBox(height: 8.0),
-            TextField(
-              controller: emailController,
+            //Phone Number Field
+            /*TextField(
+              controller: phoneController,
               decoration: InputDecoration(
                 labelText: 'Phone Number',
               ),
-            ),
+            ),*/
             SizedBox(height: 8.0),
             TextField(
               controller: passwordController,

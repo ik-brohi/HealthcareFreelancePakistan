@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HealthcareTipsPage extends StatelessWidget {
-  /*final List<Tip> tips = [
+  final List<Tip> tips = [
     Tip(
       'Eat a balanced diet',
       'Include fruits, vegetables, whole grains, lean proteins, and healthy fats in your diet.',
@@ -14,7 +14,7 @@ class HealthcareTipsPage extends StatelessWidget {
       'Stay hydrated',
       'Drink an adequate amount of water throughout the day to maintain hydration.',
     ),
-  ];*/
+  ];
 
   @override
   Widget build(BuildContext context) {
