@@ -1,3 +1,4 @@
+import 'package:ecom/DoctorOrderPage.dart';
 import 'package:ecom/Messages.dart';
 import 'package:ecom/dashboard.dart';
 import 'package:ecom/favourite.dart';
@@ -34,11 +35,15 @@ class _HomePageState extends State<HomePage> {
     MyOrders(),
     Profile(),
     ProfileDoctor(),
+    DoctorOrderPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, body: index==3 ? (role=='HEALTHCARE PROFESSIONAL' ? pages[4]: pages[3]): pages[index],
+      backgroundColor: Colors.white,
+      body: (index == 3) ? (role == 'HEALTHCARE PROFESSIONAL' ? pages[4] : pages[3]) : ((index == 2 && role == 'HEALTHCARE PROFESSIONAL') ? pages[5] : pages[index]),
+
+
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
           onTap: (value) {

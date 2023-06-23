@@ -11,6 +11,8 @@ import 'package:ecom/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -19,6 +21,60 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   String? role;
+  String _city = '';
+
+  void getCurrentLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // Check if location services are enabled
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      setState(() {
+        _city = 'Location services are disabled.';
+      });
+      return;
+    }
+
+    // Check location permission status
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.deniedForever) {
+      setState(() {
+        _city = 'Location permissions are permanently denied.';
+      });
+      return;
+    }
+
+    if (permission == LocationPermission.denied) {
+      // Request location permission
+      permission = await Geolocator.requestPermission();
+      if (permission != LocationPermission.whileInUse &&
+          permission != LocationPermission.always) {
+        setState(() {
+          _city = 'Location permissions are denied.';
+        });
+        return;
+      }
+    }
+
+    // Get current position
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
+      List<Placemark> placemarks = await placemarkFromCoordinates(
+          position.latitude, position.longitude);
+
+      setState(() {
+        _city = placemarks.first.locality ?? 'Unknown';
+      });
+    } catch (e) {
+      setState(() {
+        _city = 'Could not fetch location.';
+      });
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     List brands = [
@@ -30,6 +86,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
+          toolbarHeight: kToolbarHeight + 50,
         title: Text("Home", style: GoogleFonts.ubuntu(color: Colors.black)),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -52,7 +109,21 @@ class _DashboardState extends State<Dashboard> {
             }),*/
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.location_on_sharp,),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.location_on),
+                    onPressed: getCurrentLocation,
+                  ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    _city,
+                    style: TextStyle(fontSize: 11,color: Colors.blue),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
           ),
           GestureDetector(
@@ -224,7 +295,7 @@ class _DashboardState extends State<Dashboard> {
                             onTap: (() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (builder) =>
-                                      DoctorCat(name: "HRX")));
+                                      DoctorCat(name: "Online Doctors")));
                             }),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -242,7 +313,7 @@ class _DashboardState extends State<Dashboard> {
                             onTap: (() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (builder) =>
-                                      DoctorCat(name: "wrong")));
+                                      DoctorCat(name: "Online Nurse")));
                             }),
                             child: Align(
                               alignment: Alignment.topLeft,
