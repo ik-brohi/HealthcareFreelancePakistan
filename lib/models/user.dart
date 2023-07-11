@@ -10,7 +10,7 @@ class User {
     this.id = '',
     required this.name,
     required this.age,
-    required this.role,
+    required this.role, required String uid,
   });
 
   Map<String, dynamic> toJson() {
@@ -26,6 +26,6 @@ class User {
       id: json['id'],
       name: json['name'],
       age: json['age'],
-      role: json['role'],
+      role: json['role'], uid: json['uid'],
   );
 }

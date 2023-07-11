@@ -6,7 +6,6 @@ import 'package:like_button/like_button.dart';
 
 class Details extends StatefulWidget {
   final String image;
-
   final String title;
   final String price;
 

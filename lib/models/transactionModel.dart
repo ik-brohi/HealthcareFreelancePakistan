@@ -10,6 +10,7 @@ class TransactionModel{
   bool status;
   int amount;
   DateTime date;
+
   TransactionModel({
     required this.title,
     required this.sender,

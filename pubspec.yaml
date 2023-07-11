@@ -44,6 +44,9 @@ dependencies:
   firebase_core: ^2.14.0
   firebase_auth: ^4.6.1
   cloud_firestore: ^4.4.4
+  jazzcash_flutter: ^1.0.5
+  geolocator: ^7.7.0
+  geocoding: ^2.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,4 @@
-import 'package:ecom/LoginPage.dart';
+import 'package:ecom/services/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class PrivacySecurityPage extends StatelessWidget {

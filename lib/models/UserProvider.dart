@@ -1,55 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class User {
-  String name;
-  String email;
-  String role;
-  String profilePicture;
+class UserProvider extends ChangeNotifier {
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  User _user;
 
-  User({required this.name, required this.email, required this.profilePicture, required this.role});
-}
+  User get user => _user;
 
-class UserProvider with ChangeNotifier {
-  User? _user;
+  UserProvider() {
+    _firebaseAuth.authStateChanges().listen((user) {
+      _user = user!;
+      notifyListeners();
+    });
+  }
 
-  User? get user => _user;
-
-  void login(String email, String password) {
-    // authenticate user and retrieve user data
-    _user = User(name: "Imran Khan", email: email, profilePicture: "assets/images/profile.png", role: "HEALTHCARE PROFESSIONAL");
+  Future<void> updateUser() async {
+    _user = (await _firebaseAuth.currentUser)!;
     notifyListeners();
   }
-}
 
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          child: Text("Login"),
-          onPressed: () {
-            UserProvider userProvider = Provider.of<UserProvider>(context, listen: false);
-            userProvider.login("doctor@example.com", "password");
-          },
-        ),
-      ),
-    );
+  Future<void> signUp(
+      {required String email, required String password}) async {
+    try {
+      UserCredential userCredential = await _firebaseAuth
+          .createUserWithEmailAndPassword(email: email, password: password);
+      _user = userCredential.user!;
+      notifyListeners();
+    } catch (e) {
+      // Handle sign-up errors
+      print('Sign-up error: $e');
+    }
   }
-}
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    UserProvider userProvider = Provider.of<UserProvider>(context);
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Welcome, ${userProvider.user?.name ?? ""}"),
-      ),
-      body: Center(
-        child: Image.asset(userProvider.user?.profilePicture ?? ""),
-      ),
-    );
+  Future<void> signIn(
+      {required String email, required String password}) async {
+    try {
+      UserCredential userCredential = await _firebaseAuth
+          .signInWithEmailAndPassword(email: email, password: password);
+      _user = userCredential.user!;
+      notifyListeners();
+    } catch (e) {
+      // Handle sign-in errors
+      print('Sign-in error: $e');
+    }
+  }
+
+  Future<void> signOut() async {
+    await _firebaseAuth.signOut();
+    _user = null;
+    notifyListeners();
   }
 }

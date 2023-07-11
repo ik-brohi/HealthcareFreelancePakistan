@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 
 class AddressPage extends StatefulWidget {
   @override
@@ -7,7 +9,8 @@ class AddressPage extends StatefulWidget {
 
 class _AddressPageState extends State<AddressPage> {
   List<String> _addresses = [];
-
+  firebase_auth.FirebaseAuth auth = firebase_auth.FirebaseAuth.instance;
+  var collection = FirebaseFirestore.instance.collection('users');
   TextEditingController _addressController = TextEditingController();
 
   @override
@@ -38,6 +41,8 @@ class _AddressPageState extends State<AddressPage> {
               onPressed: () {
                 setState(() {
                   _addresses[index] = _editController.text;
+                  firebase_auth.User? user = auth.currentUser;
+                  //user!.update(_editController.text);
                   Navigator.pop(context);
                 });
               },

@@ -1,11 +1,22 @@
-import 'home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../models/UserProvider.dart';
+import 'authenticate/authenticate.dart';
+import 'home/home.dart';
 
 class Wrapper extends StatelessWidget {
-  const Wrapper({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Home();
+
+    final user = Provider.of<User>(context);
+    print(user);
+
+    // return either the Home or Authenticate widget
+    if (user == null){
+      return Authenticate();
+    } else {
+      return Home();
+    }
+
   }
 }

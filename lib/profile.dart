@@ -1,6 +1,6 @@
 import 'dart:typed_data';
-import 'dart:html';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:ecom/AddressPage.dart';
 import 'package:ecom/PrivacySecurityPage.dart';
 import 'package:ecom/ReviewsPage.dart';
@@ -32,6 +32,8 @@ class _ProfileState extends State<Profile> {
       final imageBytes = await pickedFile.readAsBytes();
       setState(() {
         _imageData = imageBytes;
+        firebase_auth.User user = firebase_auth.FirebaseAuth.instance.currentUser!;
+        FirebaseFirestore.instance.collection('users').doc(user.uid).update({'image': _imageData});
       });
     }
   }

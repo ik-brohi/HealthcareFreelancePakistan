@@ -44,7 +44,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.ecom"
-        minSdkVersion 19
+        minSdkVersion 30
         targetSdkVersion 32
         multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
