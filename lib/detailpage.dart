@@ -1,3 +1,4 @@
+import 'package:ecom/AppointmentPage.dart';
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/Widgets/sizechart.dart';
 import 'package:flutter/material.dart';
@@ -332,7 +333,12 @@ class _DetailsState extends State<Details> {
               ])),
             ],
           )),
-          Padding(
+    GestureDetector(
+    onTap: (() {
+    Navigator.of(context).push(MaterialPageRoute(
+    builder: (builder) =>AppointmentPage()));
+    }),
+          child:Padding(
             padding: const EdgeInsets.only(left: 25.0, right: 25.0, top: 5.0),
             child: Container(
               height: 50.0,
@@ -348,9 +354,11 @@ class _DetailsState extends State<Details> {
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
+
               )),
             ),
           ),
+         ),
         ],
       ),
     );

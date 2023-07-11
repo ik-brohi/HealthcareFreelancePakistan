@@ -1,5 +1,5 @@
 import 'dart:typed_data';
-import 'dart:html';
+import 'package:ecom/DoctorOrderPage.dart';
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/myOrderpage.dart';
 import 'package:flutter/material.dart';
@@ -130,7 +130,7 @@ class _ProfileDoctorState extends State<ProfileDoctor> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrders()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DoctorOrderPage()));
                   },
                   child: ListTile(
                     title: Text("My Requests", style: GoogleFonts.openSans(fontSize: 16.0)),
