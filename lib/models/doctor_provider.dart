@@ -17,12 +17,12 @@ class DoctorProvider extends ChangeNotifier {
       doctors = snapshot.docs.map((doc) {
         final data = doc.data();
         return Doctor(
-          name: data['name'],
-          title: data['title'],
-          location: data['location'],
-          hourlyRate: data['hourlyRate'].toDouble(),
-          ratings: data['ratings'].toDouble(),
-          description: data['description'].toString(),
+          name: data["name"],
+          title: data["title"],
+          location: data["location"],
+          hourlyRate: data["hourlyRate"].toDouble(),
+          ratings: data["ratings"].toDouble(),
+          description: data["description"].toString(),
         );
       }).toList();
     }
