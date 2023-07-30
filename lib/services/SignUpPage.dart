@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'auth.dart';
+import 'dart:async';
 
 class SignUpApp extends StatelessWidget {
   @override
@@ -57,12 +58,12 @@ class _SignUpPageState extends State<SignUpPage> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: const Text('Close'),
+          Widget: Text('Close'),
         ),
       ],
     );
   }
-  Future signup() async {
+  FutureOr signup() async {
     FirebaseAuth auth = FirebaseAuth.instance;
     String email = emailController.text;
     String password = passwordController.text;

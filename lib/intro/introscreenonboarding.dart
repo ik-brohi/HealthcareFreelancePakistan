@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'circle_progress_bar.dart';
 import 'introduction.dart';
+import 'dart:async';
 
 /// A IntroScreen Class.
 
@@ -36,8 +36,7 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
   Widget build(BuildContext context) {
     return Material(
       child: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: Container(
+        Widget: Container(
           color: widget.backgroudColor ?? Theme.of(context).backgroundColor,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 40.0),
@@ -51,7 +50,7 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
                       alignment: Alignment.topRight,
                       child: TextButton(
                         onPressed: widget.onTapSkipButton,
-                        child: Text('Skip', style: widget.skipTextStyle),
+                        Widget: Text('Skip', style: widget.skipTextStyle),
                       ),
                     ),
                   ],

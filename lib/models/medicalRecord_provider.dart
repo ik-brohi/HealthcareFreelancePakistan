@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,17 +11,16 @@ class MedicalRecordProvider extends ChangeNotifier {
   List<MedicalRecord> medicalRecords = [];
 
   // Fetch all medical records from Firestore
-  Future<void> fetchMedicalRecords() async {
+  FutureOr<void> fetchMedicalRecords() async {
     final snapshot = await recordsCollection.get();
 
     medicalRecords = snapshot.docs.map((doc) {
-      final data = doc.data();
       return MedicalRecord(
         id: doc.id,
-        title: data['title'],
-        createDate: (data['createDate'] as Timestamp).toDate(),
-        description: data['description'],
-        image: data['image'],
+        title: doc.get('title'),
+        createDate: doc.get('createDate'),
+        description: doc.get('description'),
+        image: doc.get('image'),
       );
     }).toList();
 
@@ -28,7 +28,7 @@ class MedicalRecordProvider extends ChangeNotifier {
   }
 
   // Add a new medical record to Firestore
-  Future<void> addMedicalRecord(MedicalRecord record) async {
+  FutureOr<void> addMedicalRecord(MedicalRecord record) async {
     try {
       await recordsCollection.add({
         'title': record.title,
@@ -43,7 +43,7 @@ class MedicalRecordProvider extends ChangeNotifier {
   }
 
   // Update an existing medical record in Firestore
-  Future<void> updateMedicalRecord(
+  FutureOr<void> updateMedicalRecord(
       String recordId, MedicalRecord updatedRecord) async {
     try {
       final updatedData = {
@@ -61,7 +61,7 @@ class MedicalRecordProvider extends ChangeNotifier {
   }
 
   // Delete a medical record from Firestore
-  Future<void> deleteMedicalRecord(String recordId) async {
+  FutureOr<void> deleteMedicalRecord(String recordId) async {
     try {
       await recordsCollection.doc(recordId).delete();
 

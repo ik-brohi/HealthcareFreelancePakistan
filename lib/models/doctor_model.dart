@@ -1,4 +1,5 @@
 class Doctor {
+  String id;
   String name;
   String title;
   String location;
@@ -7,6 +8,7 @@ class Doctor {
   String? description;
 
   Doctor({
+    required this.id,
     required this.name,
     required this.title,
     required this.location,

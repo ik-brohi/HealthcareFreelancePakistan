@@ -2,7 +2,6 @@ import 'package:ecom/Widgets/cartproduct.dart';
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'Widgets/conversationList.dart';
 import 'models/chatUserModel.dart';
 

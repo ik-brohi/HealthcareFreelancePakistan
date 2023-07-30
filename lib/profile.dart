@@ -8,6 +8,7 @@ import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/medicalRecordPage.dart';
 import 'package:ecom/myOrderpage.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -26,7 +27,7 @@ class _ProfileState extends State<Profile> {
   Alignment alignleft = Alignment.topLeft;
   Alignment alignright = Alignment.topRight;
 
-  Future<void> getImage() async {
+  FutureOr<void> getImage() async {
     final pickedFile = await ImagePicker().getImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       final imageBytes = await pickedFile.readAsBytes();
@@ -44,7 +45,7 @@ class _ProfileState extends State<Profile> {
     _getRoleFromSharedPreferences();
   }
 
-  Future<void> _getRoleFromSharedPreferences() async {
+  FutureOr<void> _getRoleFromSharedPreferences() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       role = prefs.getString('role') ?? '';

@@ -65,7 +65,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         content: Text('Payment completed! Kndly wait until the doctor accept your request!  '),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            Widget: Text('OK'),
                             onPressed: () {
                               Navigator.of(context).pop();
 
@@ -89,7 +89,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         content: Text('One or more information is incorrect.'),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            Widget: Text('OK'),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },

@@ -83,7 +83,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                         content: Text('Confirm the payment to process the request '),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            Widget: Text('OK'),
                             onPressed: () {
                               Navigator.of(context).pop();
 
@@ -107,7 +107,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                         content: Text('Please fill in all fields.'),
                         actions: [
                           TextButton(
-                            child: Text('OK'),
+                            Widget: Text('OK'),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },

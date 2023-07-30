@@ -1,15 +1,14 @@
 import 'dart:typed_data';
 import 'package:ecom/DoctorOrderPage.dart';
 import 'package:ecom/Widgets/responsive.dart';
-import 'package:ecom/myOrderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-
 import 'AddressPage.dart';
 import 'PrivacySecurityPage.dart';
 import 'ReviewsPage.dart';
 import 'medicalRecordPage.dart';
+import 'dart:async';
 
 class ProfileDoctor extends StatefulWidget {
   @override
@@ -21,7 +20,7 @@ class _ProfileDoctorState extends State<ProfileDoctor> {
   Alignment alignleft = Alignment.topLeft;
   Alignment alignright = Alignment.topRight;
 
-  Future<void> getImage() async {
+  FutureOr<void> getImage() async {
     final pickedFile = await ImagePicker().getImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       final imageBytes = await pickedFile.readAsBytes();

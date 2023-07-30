@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class MedicalRecordPage extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class MedicalRecordPage extends StatefulWidget {
 class _MedicalRecordPageState extends State<MedicalRecordPage> {
   List<File> _selectedFiles = [];
 
-  Future<void> _selectFiles() async {
+  FutureOr<void> _selectFiles() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(allowMultiple: true);
 
     if (result != null) {

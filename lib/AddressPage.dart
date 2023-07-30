@@ -52,7 +52,7 @@ class _AddressPageState extends State<AddressPage> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Cancel'),
+              Widget: Text('Cancel'),
             ),
           ],
         );

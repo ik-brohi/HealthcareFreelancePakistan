@@ -1,11 +1,7 @@
-import 'package:ecom/services/SignUpPage.dart';
-import 'package:ecom/dashboard.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:ecom/services/LoginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
-import 'services/LoginPage.dart';
-import 'onboardingScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignUpPage(),
+      home: LoginPage(),
     );
   }
 }

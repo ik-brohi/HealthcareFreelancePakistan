@@ -7,13 +7,6 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$USER_HOME$/flutter versions/flutter2.10.5/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.12/android" />
-          </set>
-        </option>
       </GradleProjectSettings>
     </option>
   </component>

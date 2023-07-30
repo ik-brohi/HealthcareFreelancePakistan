@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/UserProvider.dart';
 import 'auth.dart';
+import 'dart:async';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -93,10 +94,13 @@ class _LoginFormState extends State<LoginForm> {
               TextButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.of.call( context, SignUpPage());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignUpPage()));
                     });
                   },
-                  child: Text("Don't have an account? Signup")
+                  Widget: Text("Don't have an account? Signup")
               )
             ],
           ),

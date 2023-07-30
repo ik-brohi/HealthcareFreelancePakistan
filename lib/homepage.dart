@@ -7,6 +7,7 @@ import 'package:ecom/profile.dart';
 import 'package:ecom/profileDoctor.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     _getRoleFromSharedPreferences();
   }
 
-  Future<void> _getRoleFromSharedPreferences() async {
+  FutureOr<void> _getRoleFromSharedPreferences() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       role = prefs.getString('role') ?? '';
