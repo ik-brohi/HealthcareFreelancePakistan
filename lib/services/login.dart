@@ -93,7 +93,10 @@ class _LoginFormState extends State<LoginForm> {
               TextButton(
                   onPressed: () {
                     setState(() {
-                      Navigator.of.call( context, SignUpPage());
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignUpPage()));
                     });
                   },
                   child: Text("Don't have an account? Signup")

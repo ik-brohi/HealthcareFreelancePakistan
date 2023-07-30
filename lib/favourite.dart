@@ -1,7 +1,6 @@
 import 'package:ecom/Widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'Widgets/favouriteproduct.dart';
 
 class Favourite extends StatefulWidget {
   @override

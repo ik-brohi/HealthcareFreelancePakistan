@@ -17,10 +17,10 @@ class MedicalRecordProvider extends ChangeNotifier {
       final data = doc.data();
       return MedicalRecord(
         id: doc.id,
-        title: data['title'],
-        createDate: (data['createDate'] as Timestamp).toDate(),
-        description: data['description'],
-        image: data['image'],
+        title: doc.get('title'),
+        createDate: doc.get('createDate'),
+        description: doc.get('description'),
+        image: doc.get('image'),
       );
     }).toList();
 
