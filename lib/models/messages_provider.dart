@@ -28,6 +28,33 @@ class MessageProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  StreamSubscription<QuerySnapshot>? _messageSubscription;
+
+void listenToMessages() {
+  _messageSubscription = FirebaseFirestore.instance
+      .collection('messages')
+      .orderBy('timestamp', descending: true)
+      .snapshots()
+      .listen((snapshot) {
+    _messages = snapshot.docs.map((doc) {
+      final data = doc.data();
+      return Message(
+        id: doc.id,
+        text: data['text'],
+        userId: data['userId'],
+        timestamp: data['timestamp'].toDate(),
+      );
+    }).toList();
+    notifyListeners();
+  });
+}
+
+@override
+void dispose() {
+  _messageSubscription?.cancel();
+  super.dispose();
+}
+
   Future<void> sendMessage(String text) async {
     final currentUser = _auth.currentUser;
     if (currentUser != null) {
