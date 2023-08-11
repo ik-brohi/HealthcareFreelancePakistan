@@ -40,9 +40,9 @@ void listenToMessages() {
       final data = doc.data();
       return Message(
         id: doc.id,
-        text: data['text'],
-        userId: data['userId'],
-        timestamp: data['timestamp'].toDate(),
+        text: data.get("text"),
+        userId: data.("userId"),
+        timestamp: data.get("timestamp").toDate(),
       );
     }).toList();
     notifyListeners();
