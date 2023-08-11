@@ -73,10 +73,8 @@ flutter {
 }
 
 dependencies {
-<<<<<<< HEAD
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0"
     ext.kotlin_version = '<latest-version>'
-=======
     // Import the Firebase BoM
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:32.0.0')
@@ -89,5 +87,4 @@ dependencies {
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
->>>>>>> 3ac3ea0ce0d2a9ad8fe49cedd5fdf9f528efa59c
 }

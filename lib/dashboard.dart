@@ -7,12 +7,18 @@ import 'package:ecom/Widgets/responsive.dart';
 import 'package:ecom/Messages.dart';
 import 'package:ecom/DoctorCat.dart';
 import 'package:ecom/detailpage.dart';
+import 'package:ecom/myOrderpage.dart';
 import 'package:ecom/notifications.dart';
+import 'package:ecom/profile.dart';
+import 'package:ecom/profileDoctor.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+
+import 'DoctorOrderPage.dart';
+import 'homepage.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -22,6 +28,29 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   String? role;
   String _city = '';
+
+  @override
+  void initState() {
+    _getRoleFromSharedPreferences();
+    super.initState();
+  }
+
+  Future<void> _getRoleFromSharedPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      role = prefs.getString('role') ?? '';
+    });
+  }
+
+  // int index = 0;
+  // List pages = [
+  //   Dashboard(),
+  //   Messages(showbtn: false),
+  //   MyOrders(),
+  //   Profile(),
+  //   ProfileDoctor(),
+  //   DoctorOrderPage(),
+  // ];
 
   void getCurrentLocation() async {
     bool serviceEnabled;
@@ -77,6 +106,7 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
+   // (index == 3) ? (role == 'HEALTHCARE PROFESSIONAL' ? pages[4] : pages[3]) : ((index == 2 && role == 'HEALTHCARE PROFESSIONAL') ? pages[5] : pages[index]);
     List brands = [
       Image.asset("Images/promo1.png"),
       Image.asset("Images/promo2.png"),
@@ -84,6 +114,7 @@ class _DashboardState extends State<Dashboard> {
       Image.asset("Images/promo4.png"),
     ];
     return Scaffold(
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
         toolbarHeight: kToolbarHeight + 50,
@@ -142,7 +173,7 @@ class _DashboardState extends State<Dashboard> {
         iconTheme: IconThemeData(color: Colors.grey[900]),
       ),
       backgroundColor: Colors.white,
-      body: SafeArea(
+      body:  SafeArea(
         child: SingleChildScrollView(
           physics: ScrollPhysics(),
           child: Padding(
@@ -504,6 +535,54 @@ class _DashboardState extends State<Dashboard> {
           ),
         ),
       ),
+
+     
+
+
+    // bottomNavigationBar:  BottomNavigationBar(
+    //       currentIndex: index,
+    //       onTap: (value) {
+    //         setState(() {
+    //           index = value;
+    //         });
+    //       },
+    //       backgroundColor: Colors.white,
+    //       elevation: 0.0,
+    //       unselectedItemColor: Colors.grey[900],
+    //       showSelectedLabels: false,
+    //       selectedItemColor: Colors.grey[900],
+    //       items: [
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.home_outlined),
+    //           label: "HOME",
+    //           activeIcon: Icon(
+    //             Icons.home_filled,
+    //           ),
+    //         ),
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.send_outlined),
+    //           label: "Messages",
+    //           activeIcon: Icon(
+    //             Icons.send,
+    //           ),
+    //         ),
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.schedule_outlined),
+    //           label: "Appointments",
+    //           activeIcon: Icon(
+    //             Icons.schedule,
+    //           ),
+    //         ),
+    //         BottomNavigationBarItem(
+    //           icon: Icon(Icons.person_outline_sharp),
+    //           label: "Profile",
+    //           activeIcon: Icon(
+    //             Icons.person,
+    //           ),
+    //         ),
+    //       ]),
+
+      
     );
   }
 }

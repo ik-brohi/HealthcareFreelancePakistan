@@ -1,3 +1,7 @@
+import 'package:ecom/Messages.dart';
+import 'package:ecom/dashboard.dart';
+import 'package:ecom/homepage.dart';
+import 'package:ecom/profile.dart';
 import 'package:ecom/services/SignUpPage.dart';
 import 'package:ecom/onboardingScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginApp extends StatelessWidget {
 
@@ -50,8 +55,8 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void  login() async{
-    String email = emailController.text;
-    String password = passwordController.text;
+     email = emailController.text;
+     password = passwordController.text;
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     //Sign in logic
@@ -67,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
         if(user!.emailVerified){
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => onBoardingScreen()),
+            MaterialPageRoute(builder: (context) => Profile()),
           );
         }
         // Authentication successful, navigate to the next screen or perform any necessary actions.
@@ -156,8 +161,13 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
-                onPressed: AuthServices.signinUser(email, password, context),
+onPressed: () {
+  
+  login();
+  AuthServices.signinUser(email, password, context);
+  // AuthServices.signinUser("test@gmail.com", "test12345", context);
 
+},
               child: Text('Login'),
             ),
             SizedBox(height: 8.0),

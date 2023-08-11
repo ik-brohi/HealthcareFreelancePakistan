@@ -1,3 +1,6 @@
+import 'package:ecom/dashboard.dart';
+import 'package:ecom/homepage.dart';
+import 'package:ecom/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'firebaseFunctions.dart';
@@ -34,6 +37,12 @@ class AuthServices {
           .signInWithEmailAndPassword(email: email, password: password);
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('You are Logged in')));
+          
+                // Navigate to signup page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         ScaffoldMessenger.of(context).showSnackBar(
